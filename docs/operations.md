@@ -1,6 +1,6 @@
-# 05 服務怎麼被管理
+# 維運：服務怎麼被管理
 
-[← 04 活著不等於能用](04-alive-is-not-ready.md) · [目錄](README.md) · [06 開發筆記 →](06-dev-notes.md)
+[← 回到 README](../README.md)
 
 主機上的程式誰負責啟動？掛了誰救？備份什麼時候做？log 會不會塞滿硬碟？答案大多是同一個：Linux 的服務總管 **systemd**。
 
@@ -17,7 +17,7 @@ systemd 管的東西分兩種：
 | `snow-sentinel-api` | 服務 | 回應路況查詢 |
 | `snow-sentinel-collector` | 服務 | 抓官方資料、寫進 SQLite |
 | `nginx` | 服務 | 接住 Tunnel 送進來的請求，轉給 Web |
-| `snow-sentinel-observe.timer` | 排程 | 每分鐘執行一次 Observer（第 04 章） |
+| `snow-sentinel-observe.timer` | 排程 | 每分鐘執行一次 Observer（見[可靠性](reliability.md)） |
 | `snow-sentinel-backup.timer` | 排程 | 每天台北時間 03:15 備份資料庫 |
 
 名稱裡的 `snow-sentinel` 是專案改名前的舊名。
@@ -132,4 +132,4 @@ journalctl -u snow-sentinel-collector -n 20 --no-pager
 
 ---
 
-查核依據：私人 repo `deploy/systemd/` 的服務與排程設定、`deploy/ops/` 的 journald、log 輪替與自動更新設定、`deploy/ops/README.md` 與 `deploy/ops/RUNBOOK.md`（2026-10-21，dev `a30d531`）。本章依 repo 設定檔整理，不代表主機上目前實際生效的狀態，也不是在主機上觀察的結果。
+查核依據：私人 repo `deploy/systemd/` 的服務與排程設定、`deploy/ops/` 的 journald、log 輪替與自動更新設定、`deploy/ops/README.md` 與 `deploy/ops/RUNBOOK.md`（2026-10-21，dev `a30d531`）。本文依 repo 設定檔整理，不代表主機上目前實際生效的狀態，也不是在主機上觀察的結果。

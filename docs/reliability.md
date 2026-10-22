@@ -1,6 +1,8 @@
-# 04 活著不等於能用
+# 可靠性：活著不等於能用
 
-[← 03 一個請求怎麼走](03-request-path.md) · [目錄](README.md) · [05 服務怎麼被管理 →](05-managing-services.md)
+[← 回到 README](../README.md)
+
+這份文件說明系統怎麼判斷「正常」：health、ready、Observer 各自檢查什麼，以及資料新鮮度怎麼判斷。
 
 ## 「正常」有三層
 
@@ -60,4 +62,4 @@ HTTP 200 只代表「東西有送到」，不代表內容是新的。所以入�
 
 ---
 
-查核依據：私人 repo `README.md`、`docs/DATA.md`、`docs/PRODUCTION.md`（2026-10-21，dev `a30d531`）。本章依文件整理，不是在主機上實際觀察的結果。
+查核依據：私人 repo `README.md`、`docs/DATA.md`、`docs/PRODUCTION.md`（2026-10-21，dev `a30d531`）。本文依文件整理，不是在主機上實際觀察的結果。

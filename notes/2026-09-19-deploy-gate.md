@@ -1,6 +1,6 @@
 # 2026-09-19 部署被保護閘門誤擋
 
-[← 06 開發筆記](../06-dev-notes.md) · [目錄](../README.md)
+[← 開發筆記](README.md) · [README](../README.md) · [部署](../docs/deployment.md)
 
 只改了 `package.json` 裡 3 行開發用的指令，自動部署就被自己的安全機制擋下。
 
