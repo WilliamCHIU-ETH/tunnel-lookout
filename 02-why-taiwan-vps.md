@@ -1,6 +1,6 @@
 # 02 為什麼是台灣 VPS
 
-[← 01 為什麼做](01-why.md) · [目錄](README.md) · [07 分工與限制 →](07-ownership-and-limits.md)
+[← 01 為什麼做](01-why.md) · [目錄](README.md) · [03 一個請求怎麼走 →](03-request-path.md)
 
 ## 一開始在 Cloudflare 上
 
